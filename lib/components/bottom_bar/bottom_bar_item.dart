@@ -20,6 +20,7 @@ class BottomBarItem extends StatelessWidget {
     Widget result = InkResponse(
       onTap: onTap,
       child: Container(
+        // color: Colors.red,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -49,7 +50,7 @@ class _DotIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 6),
+      padding: EdgeInsets.only(top: 2),
       child: ClipOval(
         child: Container(
           width: 8,

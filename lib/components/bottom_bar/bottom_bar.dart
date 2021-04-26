@@ -17,14 +17,13 @@ class BottomBar extends StatefulWidget {
 class _BottomBarState extends State<BottomBar> {
   @override
   Widget build(BuildContext context) {
-    const test = [Colors.purple, Colors.yellow, Colors.blue];
 
     final List<Widget> tiles = <Widget>[];
     for (var i = 0; i < widget.items.length; i++) {
       tiles.add(BottomBarItem(
         item: widget.items[i],
         selected: i == widget.currentIndex,
-        indicator: test[i],
+        indicator: widget.items[i].backgroundColor ?? Colors.grey.shade800, 
         onTap: () {
           widget.onTap?.call(i);
         },
@@ -40,7 +39,7 @@ class _BottomBarState extends State<BottomBar> {
             BoxShadow(
                 color: Colors.grey.shade200, blurRadius: 14, spreadRadius: 2)
           ]),
-      padding: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+      padding: EdgeInsets.symmetric( horizontal: 12),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: tiles,

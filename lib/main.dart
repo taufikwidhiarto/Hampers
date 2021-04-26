@@ -64,17 +64,44 @@ class _MyHomePageState extends State<MyHomePage> {
 
   static List<BottomNavigationBarItem> _bottomItem = <BottomNavigationBarItem>[
     BottomNavigationBarItem(
-        icon: Icon(Icons.home_outlined),
-        label: 'Explore',
-        backgroundColor: Colors.purple),
+      icon: Icon(
+        Icons.store_mall_directory_outlined,
+        color: Colors.grey.shade600,
+      ),
+      label: 'Explore',
+      backgroundColor: Colors.purple.shade600,
+      activeIcon: Icon(
+        Icons.store_mall_directory_outlined,
+        color: Colors.purple.shade600,
+        size: 32,
+      ),
+    ),
     BottomNavigationBarItem(
-        icon: Icon(Icons.shopping_basket_outlined),
-        label: 'Cart',
-        backgroundColor: Colors.red),
+      icon: Icon(
+        Icons.shopping_basket_outlined,
+        color: Colors.grey.shade600,
+      ),
+      label: 'Cart',
+      backgroundColor: Colors.green.shade600,
+      activeIcon: Icon(
+        Icons.shopping_basket_outlined,
+        color: Colors.green.shade600,
+        size: 32,
+      ),
+    ),
     BottomNavigationBarItem(
-        icon: Icon(Icons.account_circle_outlined),
-        label: 'Profile',
-        backgroundColor: Colors.blue)
+      icon: Icon(
+        Icons.person_outline,
+        color: Colors.grey.shade600,
+      ),
+      label: 'Profile',
+      backgroundColor: Colors.orange.shade600,
+      activeIcon: Icon(
+        Icons.person_outline,
+        color: Colors.orange.shade600,
+        size: 32,
+      ),
+    )
   ];
 
   @override
